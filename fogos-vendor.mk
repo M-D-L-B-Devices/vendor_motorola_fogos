@@ -8,7 +8,6 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/product/etc/permissions/UimGba.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimGba.xml \
     vendor/motorola/fogos/proprietary/product/etc/permissions/UimGbaManager.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimGbaManager.xml \
-    vendor/motorola/fogos/proprietary/product/etc/permissions/UimService.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimService.xml \
     vendor/motorola/fogos/proprietary/system_ext/etc/permissions/moto-telephony.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/moto-telephony.xml \
     vendor/motorola/fogos/proprietary/system/etc/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
     vendor/motorola/fogos/proprietary/system/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
@@ -59,6 +58,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/system_ext/lib/vendor.qti.hardware.wifidisplaysession@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.qti.hardware.wifidisplaysession@1.0.so \
     vendor/motorola/fogos/proprietary/system_ext/lib64/com.qualcomm.qti.ant@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.ant@1.0.so \
     vendor/motorola/fogos/proprietary/system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.dpm.api@1.0.so \
+    vendor/motorola/fogos/proprietary/system_ext/lib64/com.qualcomm.qti.uceservice@2.3.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.uceservice@2.3.so \
     vendor/motorola/fogos/proprietary/system_ext/lib64/lib-imsvideocodec.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/lib-imsvideocodec.so \
     vendor/motorola/fogos/proprietary/system_ext/lib64/lib-imsvt.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/lib-imsvt.so \
     vendor/motorola/fogos/proprietary/system_ext/lib64/lib-imsvtextutils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/lib-imsvtextutils.so \
@@ -154,11 +154,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/bin/qrtr-ns:$(TARGET_COPY_OUT_VENDOR)/bin/qrtr-ns \
     vendor/motorola/fogos/proprietary/vendor/bin/qseecomd:$(TARGET_COPY_OUT_VENDOR)/bin/qseecomd \
     vendor/motorola/fogos/proprietary/vendor/bin/qti:$(TARGET_COPY_OUT_VENDOR)/bin/qti \
-    vendor/motorola/fogos/proprietary/vendor/bin/qtigetprop:$(TARGET_COPY_OUT_VENDOR)/bin/qtigetprop \
-    vendor/motorola/fogos/proprietary/vendor/bin/qtisetprop:$(TARGET_COPY_OUT_VENDOR)/bin/qtisetprop \
     vendor/motorola/fogos/proprietary/vendor/bin/rmt_storage:$(TARGET_COPY_OUT_VENDOR)/bin/rmt_storage \
     vendor/motorola/fogos/proprietary/vendor/bin/sensors.qti:$(TARGET_COPY_OUT_VENDOR)/bin/sensors.qti \
-    vendor/motorola/fogos/proprietary/vendor/bin/shsusrd:$(TARGET_COPY_OUT_VENDOR)/bin/shsusrd \
     vendor/motorola/fogos/proprietary/vendor/bin/sscrpcd:$(TARGET_COPY_OUT_VENDOR)/bin/sscrpcd \
     vendor/motorola/fogos/proprietary/vendor/bin/tftp_server:$(TARGET_COPY_OUT_VENDOR)/bin/tftp_server \
     vendor/motorola/fogos/proprietary/vendor/bin/thermal-engine:$(TARGET_COPY_OUT_VENDOR)/bin/thermal-engine \
@@ -195,6 +192,10 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/etc/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf \
     vendor/motorola/fogos/proprietary/vendor/etc/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     vendor/motorola/fogos/proprietary/vendor/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
+    vendor/motorola/fogos/proprietary/vendor/etc/bst_3ddns_1.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/bst_3ddns_1.cfg \
+    vendor/motorola/fogos/proprietary/vendor/etc/bst_3ddns_2.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/bst_3ddns_2.cfg \
+    vendor/motorola/fogos/proprietary/vendor/etc/bst_3ddns_3.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/bst_3ddns_3.cfg \
+    vendor/motorola/fogos/proprietary/vendor/etc/bstconfig/hdrcfg.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/bstconfig/hdrcfg.cfg \
     vendor/motorola/fogos/proprietary/vendor/etc/cacert_location.pem:$(TARGET_COPY_OUT_VENDOR)/etc/cacert_location.pem \
     vendor/motorola/fogos/proprietary/vendor/etc/camera/anc_detect_model:$(TARGET_COPY_OUT_VENDOR)/etc/camera/anc_detect_model \
     vendor/motorola/fogos/proprietary/vendor/etc/camera/anc_track_model:$(TARGET_COPY_OUT_VENDOR)/etc/camera/anc_track_model \
@@ -266,6 +267,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/etc/init/init.vendor.sensors.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.sensors.rc \
     vendor/motorola/fogos/proprietary/vendor/etc/init/init_thermal-engine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_thermal-engine.rc \
     vendor/motorola/fogos/proprietary/vendor/etc/init/ipa_fws.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipa_fws.rc \
+    vendor/motorola/fogos/proprietary/vendor/etc/init/motorola.hardware.camera.imgtuner@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/motorola.hardware.camera.imgtuner@2.0-service.rc \
     vendor/motorola/fogos/proprietary/vendor/etc/init/netmgrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netmgrd.rc \
     vendor/motorola/fogos/proprietary/vendor/etc/init/port-bridge.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/port-bridge.rc \
     vendor/motorola/fogos/proprietary/vendor/etc/init/poweropt-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/poweropt-service.rc \
@@ -273,8 +275,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/etc/init/qdcmss.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qdcmss.rc \
     vendor/motorola/fogos/proprietary/vendor/etc/init/qmipriod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qmipriod.rc \
     vendor/motorola/fogos/proprietary/vendor/etc/init/qseecomd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qseecomd.rc \
-    vendor/motorola/fogos/proprietary/vendor/etc/init/shsusrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/shsusrd.rc \
     vendor/motorola/fogos/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
+    vendor/motorola/fogos/proprietary/vendor/etc/init/vendor.mmi.carrier.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mmi.carrier.rc \
     vendor/motorola/fogos/proprietary/vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-guestos-service.rc \
     vendor/motorola/fogos/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
     vendor/motorola/fogos/proprietary/vendor/etc/init/vendor.qti.diag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.diag.rc \
@@ -295,6 +297,17 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/etc/init/vendor.sensors.sscrpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.sscrpcd.rc \
     vendor/motorola/fogos/proprietary/vendor/etc/init/wfdvndservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wfdvndservice.rc \
     vendor/motorola/fogos/proprietary/vendor/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
+    vendor/motorola/fogos/proprietary/vendor/etc/libnfc-PN557.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-PN557.conf \
+    vendor/motorola/fogos/proprietary/vendor/etc/libnfc-SN220-UICC.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-SN220-UICC.conf \
+    vendor/motorola/fogos/proprietary/vendor/etc/libnfc-SN220.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-SN220.conf \
+    vendor/motorola/fogos/proprietary/vendor/etc/libnfc-mtp-SN100-UICC.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-mtp-SN100-UICC.conf \
+    vendor/motorola/fogos/proprietary/vendor/etc/libnfc-mtp-SN100.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-mtp-SN100.conf \
+    vendor/motorola/fogos/proprietary/vendor/etc/libnfc-mtp-SN100_38_4MHZ.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-mtp-SN100_38_4MHZ.conf \
+    vendor/motorola/fogos/proprietary/vendor/etc/libnfc-nxp-pnscr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-pnscr.conf \
+    vendor/motorola/fogos/proprietary/vendor/etc/libnfc-qrd-SN100.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-qrd-SN100.conf \
+    vendor/motorola/fogos/proprietary/vendor/etc/libnfc-qrd-SN100_38_4MHZ.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-qrd-SN100_38_4MHZ.conf \
+    vendor/motorola/fogos/proprietary/vendor/etc/libnfc-sec-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-nci.conf \
+    vendor/motorola/fogos/proprietary/vendor/etc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf \
     vendor/motorola/fogos/proprietary/vendor/etc/lm/AdaptLaunchFeature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/lm/AdaptLaunchFeature.xml \
     vendor/motorola/fogos/proprietary/vendor/etc/lm/AppClassifierFeature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/lm/AppClassifierFeature.xml \
     vendor/motorola/fogos/proprietary/vendor/etc/lm/GameOptimizationFeature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/lm/GameOptimizationFeature.xml \
@@ -321,6 +334,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/etc/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml \
     vendor/motorola/fogos/proprietary/vendor/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
     vendor/motorola/fogos/proprietary/vendor/etc/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
+    vendor/motorola/fogos/proprietary/vendor/etc/nfc_calibration.txt:$(TARGET_COPY_OUT_VENDOR)/etc/nfc_calibration.txt \
     vendor/motorola/fogos/proprietary/vendor/etc/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
     vendor/motorola/fogos/proprietary/vendor/etc/perf/commonsysnodesconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonsysnodesconfigs.xml \
     vendor/motorola/fogos/proprietary/vendor/etc/perf/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml \
@@ -331,6 +345,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/etc/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml \
     vendor/motorola/fogos/proprietary/vendor/etc/pwr/PowerFeatureConfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/pwr/PowerFeatureConfig.xml \
     vendor/motorola/fogos/proprietary/vendor/etc/pwr/VideoPowerOptFeature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/pwr/VideoPowerOptFeature.xml \
+    vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/qcrilNr.db:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/qcrilNr.db \
     vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/config/10.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/10.0_config.sql \
     vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/config/11.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/11.0_config.sql \
     vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/config/12.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/12.0_config.sql \
@@ -599,6 +614,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/firmware/focaltech-csot-ft3681-22-0000-fogos.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/focaltech-csot-ft3681-22-0000-fogos.bin \
     vendor/motorola/fogos/proprietary/vendor/firmware/fs1815.fsm:$(TARGET_COPY_OUT_VENDOR)/firmware/fs1815.fsm \
     vendor/motorola/fogos/proprietary/vendor/firmware/goodix-tm-gt9916S-23051702-646483c4-fogos.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/goodix-tm-gt9916S-23051702-646483c4-fogos.bin \
+    vendor/motorola/fogos/proprietary/vendor/firmware/sec_s3nrn4v_firmware.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/sec_s3nrn4v_firmware.bin \
     vendor/motorola/fogos/proprietary/vendor/firmware/tm_goodix_cfg_group.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tm_goodix_cfg_group.bin \
     vendor/motorola/fogos/proprietary/vendor/firmware/vpu20_1v.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b01 \
     vendor/motorola/fogos/proprietary/vendor/firmware/vpu20_1v.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b02 \
@@ -671,25 +687,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/gpu/kbc/unified_kbcs_64.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_kbcs_64.bin \
     vendor/motorola/fogos/proprietary/vendor/gpu/kbc/unified_ksqs.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_ksqs.bin \
     vendor/motorola/fogos/proprietary/vendor/lib/btaudio_offload_if.so:$(TARGET_COPY_OUT_VENDOR)/lib/btaudio_offload_if.so \
-    vendor/motorola/fogos/proprietary/vendor/lib/camera/com.mot.eeprom.mot_gt24p256c_s5kjns_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.mot.eeprom.mot_gt24p256c_s5kjns_eeprom.so \
-    vendor/motorola/fogos/proprietary/vendor/lib/camera/com.mot.eeprom.mot_gt24p64b_ov16a1q_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.mot.eeprom.mot_gt24p64b_ov16a1q_eeprom.so \
-    vendor/motorola/fogos/proprietary/vendor/lib/camera/com.mot.eeprom.mot_gt24p64b_s5k3p9_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.mot.eeprom.mot_gt24p64b_s5k3p9_eeprom.so \
-    vendor/motorola/fogos/proprietary/vendor/lib/camera/com.mot.eeprom.mot_sc202acs_otp.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.mot.eeprom.mot_sc202acs_otp.so \
-    vendor/motorola/fogos/proprietary/vendor/lib/camera/com.qti.flash.aw36514.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.flash.aw36514.so \
-    vendor/motorola/fogos/proprietary/vendor/lib/camera/com.qti.flash.ocp81375.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.flash.ocp81375.so \
-    vendor/motorola/fogos/proprietary/vendor/lib/camera/com.qti.sensor.mot_ov16a1q.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensor.mot_ov16a1q.so \
-    vendor/motorola/fogos/proprietary/vendor/lib/camera/com.qti.sensor.mot_s5k3p9.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensor.mot_s5k3p9.so \
-    vendor/motorola/fogos/proprietary/vendor/lib/camera/com.qti.sensor.mot_s5kjns.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensor.mot_s5kjns.so \
-    vendor/motorola/fogos/proprietary/vendor/lib/camera/com.qti.sensor.mot_sc202acs.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensor.mot_sc202acs.so \
-    vendor/motorola/fogos/proprietary/vendor/lib/camera/com.qti.sensormodule.mot_fogor_s5kjns_qtech.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensormodule.mot_fogor_s5kjns_qtech.bin \
-    vendor/motorola/fogos/proprietary/vendor/lib/camera/com.qti.sensormodule.mot_fogor_sc202acs_sunny.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensormodule.mot_fogor_sc202acs_sunny.bin \
-    vendor/motorola/fogos/proprietary/vendor/lib/camera/com.qti.sensormodule.mot_fogos_ov16a1q_ofilm.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensormodule.mot_fogos_ov16a1q_ofilm.bin \
-    vendor/motorola/fogos/proprietary/vendor/lib/camera/com.qti.sensormodule.mot_fogos_s5k3p9_qtech.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensormodule.mot_fogos_s5k3p9_qtech.bin \
-    vendor/motorola/fogos/proprietary/vendor/lib/camera/com.qti.tuned.default.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.tuned.default.bin \
-    vendor/motorola/fogos/proprietary/vendor/lib/camera/com.qti.tuned.mot_fogo_sc202acs.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.tuned.mot_fogo_sc202acs.bin \
-    vendor/motorola/fogos/proprietary/vendor/lib/camera/com.qti.tuned.mot_fogor_s5kjns.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.tuned.mot_fogor_s5kjns.bin \
-    vendor/motorola/fogos/proprietary/vendor/lib/camera/com.qti.tuned.mot_fogos_ov16a1q.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.tuned.mot_fogos_ov16a1q.bin \
-    vendor/motorola/fogos/proprietary/vendor/lib/camera/com.qti.tuned.mot_fogos_s5k3p9.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.tuned.mot_fogos_s5k3p9.bin \
     vendor/motorola/fogos/proprietary/vendor/lib/com.qualcomm.qti.bluetooth_audio@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.bluetooth_audio@1.0.so \
     vendor/motorola/fogos/proprietary/vendor/lib/egl/eglSubDriverAndroid.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/eglSubDriverAndroid.so \
     vendor/motorola/fogos/proprietary/vendor/lib/egl/libEGL_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libEGL_adreno.so \
@@ -737,6 +734,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/lib/libadreno_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadreno_utils.so \
     vendor/motorola/fogos/proprietary/vendor/lib/libadsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadsprpc.so \
     vendor/motorola/fogos/proprietary/vendor/lib/libaudcal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudcal.so \
+    vendor/motorola/fogos/proprietary/vendor/lib/libbitmlengine.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbitmlengine.so \
+    vendor/motorola/fogos/proprietary/vendor/lib/libbitmlenginev2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbitmlenginev2.so \
     vendor/motorola/fogos/proprietary/vendor/lib/libbluetooth_audio_session_qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbluetooth_audio_session_qti.so \
     vendor/motorola/fogos/proprietary/vendor/lib/libc2d30_bltlib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libc2d30_bltlib.so \
     vendor/motorola/fogos/proprietary/vendor/lib/libcamxexternalformatutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxexternalformatutils.so \
@@ -866,6 +865,25 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/lib/vendor.qti.memory.pasrmanager@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.memory.pasrmanager@1.0.so \
     vendor/motorola/fogos/proprietary/vendor/lib/vendor.qti.memory.pasrmanager@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.memory.pasrmanager@1.1.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/btaudio_offload_if.so:$(TARGET_COPY_OUT_VENDOR)/lib64/btaudio_offload_if.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/camera/com.mot.eeprom.mot_gt24p256c_s5kjns_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.mot.eeprom.mot_gt24p256c_s5kjns_eeprom.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/camera/com.mot.eeprom.mot_gt24p64b_ov16a1q_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.mot.eeprom.mot_gt24p64b_ov16a1q_eeprom.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/camera/com.mot.eeprom.mot_gt24p64b_s5k3p9_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.mot.eeprom.mot_gt24p64b_s5k3p9_eeprom.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/camera/com.mot.eeprom.mot_sc202acs_otp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.mot.eeprom.mot_sc202acs_otp.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/camera/com.qti.flash.aw36514.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.flash.aw36514.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/camera/com.qti.flash.ocp81375.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.flash.ocp81375.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/camera/com.qti.sensor.mot_ov16a1q.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.mot_ov16a1q.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/camera/com.qti.sensor.mot_s5k3p9.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.mot_s5k3p9.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/camera/com.qti.sensor.mot_s5kjns.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.mot_s5kjns.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/camera/com.qti.sensor.mot_sc202acs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.mot_sc202acs.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/camera/com.qti.sensormodule.mot_fogor_s5kjns_qtech.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.mot_fogor_s5kjns_qtech.bin \
+    vendor/motorola/fogos/proprietary/vendor/lib64/camera/com.qti.sensormodule.mot_fogor_sc202acs_sunny.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.mot_fogor_sc202acs_sunny.bin \
+    vendor/motorola/fogos/proprietary/vendor/lib64/camera/com.qti.sensormodule.mot_fogos_ov16a1q_ofilm.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.mot_fogos_ov16a1q_ofilm.bin \
+    vendor/motorola/fogos/proprietary/vendor/lib64/camera/com.qti.sensormodule.mot_fogos_s5k3p9_qtech.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.mot_fogos_s5k3p9_qtech.bin \
+    vendor/motorola/fogos/proprietary/vendor/lib64/camera/com.qti.tuned.default.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.default.bin \
+    vendor/motorola/fogos/proprietary/vendor/lib64/camera/com.qti.tuned.mot_fogo_sc202acs.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.mot_fogo_sc202acs.bin \
+    vendor/motorola/fogos/proprietary/vendor/lib64/camera/com.qti.tuned.mot_fogor_s5kjns.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.mot_fogor_s5kjns.bin \
+    vendor/motorola/fogos/proprietary/vendor/lib64/camera/com.qti.tuned.mot_fogos_ov16a1q.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.mot_fogos_ov16a1q.bin \
+    vendor/motorola/fogos/proprietary/vendor/lib64/camera/com.qti.tuned.mot_fogos_s5k3p9.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.mot_fogos_s5k3p9.bin \
     vendor/motorola/fogos/proprietary/vendor/lib64/camera/components/com.arcsoft.node.supernightraw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.arcsoft.node.supernightraw.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/camera/components/com.bst.node.hdrdetect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.bst.node.hdrdetect.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/camera/components/com.bst.node.mfnr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.bst.node.mfnr.so \
@@ -928,6 +946,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/lib64/com.fingerprints.extension@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.fingerprints.extension@1.0.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/com.qti.chiusecaseselector.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.chiusecaseselector.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/com.qti.feature2.anchorsync.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.anchorsync.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/com.qti.feature2.arcrawpro.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.arcrawpro.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/com.qti.feature2.demux.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.demux.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/com.qti.feature2.frameselect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.frameselect.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/com.qti.feature2.fusion.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.fusion.so \
@@ -975,6 +994,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/lib64/hw/com.dsi.ant@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.dsi.ant@1.0-impl.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/hw/com.qti.chi.override.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.qti.chi.override.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/hw/fingerprint.goodix.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.goodix.default.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/hw/motorola.hardware.camera.imgtuner@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/motorola.hardware.camera.imgtuner@2.0-impl.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.gnss@4.0-impl.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so \
@@ -1042,6 +1062,10 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/lib64/libaidenoiserv2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaidenoiserv2.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libaoa.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaoa.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libappclassifier.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libappclassifier.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/libarcsoft_chi_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_chi_utils.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/libarcsoft_portrait_super_night_se_raw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_portrait_super_night_se_raw.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/libarcsoft_super_night_raw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_super_night_raw.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/libarcsoft_super_night_se_raw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_super_night_se_raw.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libasn1cper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libasn1cper.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libasn1crt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libasn1crt.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libasn1crtx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libasn1crtx.so \
@@ -1052,6 +1076,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/lib64/libbluetooth_audio_session_qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session_qti.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libbtnv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbtnv.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libc2d30_bltlib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc2d30_bltlib.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/libc2d_helper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc2d_helper.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libcacertclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcacertclient.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libcamera_nn_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamera_nn_stub.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libcamerapostproc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamerapostproc.so \
@@ -1109,6 +1134,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/lib64/libgps.utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgps.utils.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libgpudataproducer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpudataproducer.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgsl.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/libhdr_impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdr_impl.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libhdr_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdr_stub.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdr_tm.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libidl.so \
@@ -1158,6 +1184,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/lib64/libmmcamera_pdpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_pdpc.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libmmosal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmosal.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libmot_afd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmot_afd.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/libmot_chi_desktop_helper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmot_chi_desktop_helper.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/libmot_engine_settings.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmot_engine_settings.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libmotext_inf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmotext_inf.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libmotohid.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmotohid.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libmpbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmpbase.so \
@@ -1179,6 +1207,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/lib64/libperfgluelayer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libperfgluelayer.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libperfioctl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libperfioctl.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libperipheral_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libperipheral_client.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/libportrait_repair_ppl3_ocl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libportrait_repair_ppl3_ocl.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libpowercore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpowercore.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libprekill.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprekill.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libqcbor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcbor.so \
@@ -1276,6 +1305,10 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/lib64/libxtadapter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxtadapter.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libxtwifi_server_protocol.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxtwifi_server_protocol.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/libxtwifi_server_protocol_uri_v3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxtwifi_server_protocol_uri_v3.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/motorola.hardware.camera.desktop@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/motorola.hardware.camera.desktop@1.0.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/motorola.hardware.camera.desktop@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/motorola.hardware.camera.desktop@2.0.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/motorola.hardware.camera.imgtuner@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/motorola.hardware.camera.imgtuner@1.0.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/motorola.hardware.camera.imgtuner@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/motorola.hardware.camera.imgtuner@2.0.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/qcrilMarshal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/qcrilMarshal.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/qcrild_libqcrilnrutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/qcrild_libqcrilnrutils.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/qtiril-utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/qtiril-utils.so \
@@ -1370,6 +1403,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so \
+    vendor/motorola/fogos/proprietary/vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.scve.panorama@1.0.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.slmadapter@1.0.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/vendor.qti.hardware.soter@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.soter@1.0.so \
@@ -1420,7 +1455,6 @@ PRODUCT_PACKAGES += \
     HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND \
     HotwordEnrollmentXGoogleHEXAGON_WIDEBAND \
     ImsRcsService \
-    QtiTelephony \
     QtiTelephonyService \
     WfdService \
     ims \
@@ -1429,26 +1463,16 @@ PRODUCT_PACKAGES += \
     tcmclient \
     uimgbalibrary \
     uimgbamanagerlibrary \
-    uimservicelibrary \
     com.android.hotwordenrollment.common.util \
     com.qti.dpmframework \
     dpmapi \
     moto-telephony \
     qcrilhook \
     vendor.qti.hardware.alarm-V1.0-java \
-    vendor.qti.ims.configservice-V1.0-java \
-    vendor.qti.ims.configservice-V1.1-java \
     vendor.qti.ims.connection-V1.0-java \
-    vendor.qti.ims.factory-V1.1-java \
     vendor.qti.ims.factory-V2.0-java \
-    vendor.qti.ims.factory-V2.1-java \
-    vendor.qti.ims.factory-V2.2-java \
     vendor.qti.ims.rcssip-V1.0-java \
-    vendor.qti.ims.rcssip-V1.1-java \
-    vendor.qti.ims.rcssip-V1.2-java \
     vendor.qti.ims.rcsuce-V1.0-java \
-    vendor.qti.ims.rcsuce-V1.1-java \
-    vendor.qti.ims.rcsuce-V1.2-java \
     android.hardware.gnss@2.1-service-qti \
     manifest_android.hardware.drm@1.3-service.widevine \
     vendor.dolby.media.c2@1.0-service \
