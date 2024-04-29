@@ -58,7 +58,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/system_ext/lib/vendor.qti.hardware.wifidisplaysession@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.qti.hardware.wifidisplaysession@1.0.so \
     vendor/motorola/fogos/proprietary/system_ext/lib64/com.qualcomm.qti.ant@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.ant@1.0.so \
     vendor/motorola/fogos/proprietary/system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.dpm.api@1.0.so \
-    vendor/motorola/fogos/proprietary/system_ext/lib64/com.qualcomm.qti.uceservice@2.3.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.uceservice@2.3.so \
     vendor/motorola/fogos/proprietary/system_ext/lib64/lib-imsvideocodec.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/lib-imsvideocodec.so \
     vendor/motorola/fogos/proprietary/system_ext/lib64/lib-imsvt.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/lib-imsvt.so \
     vendor/motorola/fogos/proprietary/system_ext/lib64/lib-imsvtextutils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/lib-imsvtextutils.so \
@@ -89,10 +88,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/system_ext/lib64/libwfduibcsinkinterface.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfduibcsinkinterface.so \
     vendor/motorola/fogos/proprietary/system_ext/lib64/libwfduibcsrc.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfduibcsrc.so \
     vendor/motorola/fogos/proprietary/system_ext/lib64/libwfduibcsrcinterface.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfduibcsrcinterface.so \
-    vendor/motorola/fogos/proprietary/system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.ImsRtpService-V1-ndk.so \
     vendor/motorola/fogos/proprietary/system_ext/lib64/vendor.qti.diaghal@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.diaghal@1.0.so \
     vendor/motorola/fogos/proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.imsrtpservice@3.0.so \
-    vendor/motorola/fogos/proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.imsrtpservice@3.1.so \
     vendor/motorola/fogos/proprietary/system_ext/lib64/vendor.qti.qspmhal-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.qspmhal-V1-ndk.so \
     vendor/motorola/fogos/proprietary/system_ext/lib64/vendor.qti.qspmhal@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.qspmhal@1.0.so \
     vendor/motorola/fogos/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
@@ -276,7 +273,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/etc/init/qmipriod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qmipriod.rc \
     vendor/motorola/fogos/proprietary/vendor/etc/init/qseecomd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qseecomd.rc \
     vendor/motorola/fogos/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
-    vendor/motorola/fogos/proprietary/vendor/etc/init/vendor.mmi.carrier.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mmi.carrier.rc \
     vendor/motorola/fogos/proprietary/vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-guestos-service.rc \
     vendor/motorola/fogos/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
     vendor/motorola/fogos/proprietary/vendor/etc/init/vendor.qti.diag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.diag.rc \
@@ -349,8 +345,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/qcrilNr.db:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/qcrilNr.db \
     vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/config/10.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/10.0_config.sql \
     vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/config/11.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/11.0_config.sql \
-    vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/config/12.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/12.0_config.sql \
-    vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/config/13.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/13.0_config.sql \
     vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/config/6.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/6.0_config.sql \
     vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/config/9.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/9.0_config.sql \
     vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/ecc/0_initial.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/ecc/0_initial.sql \
@@ -384,12 +378,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/ecc/38_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/ecc/38_version_qcrildb.sql \
     vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/ecc/39_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/ecc/39_version_qcrildb.sql \
     vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/ecc/3_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/ecc/3_version_qcrildb.sql \
-    vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/ecc/40_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/ecc/40_version_qcrildb.sql \
-    vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/ecc/41_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/ecc/41_version_qcrildb.sql \
-    vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/ecc/42_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/ecc/42_version_qcrildb.sql \
-    vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/ecc/43_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/ecc/43_version_qcrildb.sql \
-    vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/ecc/44_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/ecc/44_version_qcrildb.sql \
-    vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/ecc/45_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/ecc/45_version_qcrildb.sql \
     vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/ecc/4_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/ecc/4_version_qcrildb.sql \
     vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/ecc/5_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/ecc/5_version_qcrildb.sql \
     vendor/motorola/fogos/proprietary/vendor/etc/qcril_database/upgrade/ecc/6_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/ecc/6_version_qcrildb.sql \
@@ -1382,8 +1370,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/fogos/proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.ims@1.5.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.6.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.ims@1.6.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.7.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.ims@1.7.so \
-    vendor/motorola/fogos/proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.8.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.ims@1.8.so \
-    vendor/motorola/fogos/proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.9.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.ims@1.9.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.lpa@1.0.so \
     vendor/motorola/fogos/proprietary/vendor/lib64/vendor.qti.hardware.radio.lpa@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.lpa@1.1.so \
