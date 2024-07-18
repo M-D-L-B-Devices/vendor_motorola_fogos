@@ -2792,7 +2792,7 @@
 		</mappings>
 	</device>
 
-	<device name="fogos" version="1.4">
+	<device name="fogos" version="1.5">
 
 		<!-- Features list variable hardware components for this device -->
 		<features>
